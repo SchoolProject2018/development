@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SchoolMaster</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="usename">Username</string>
+    <string name="password">Password</string>
+    <string name="login">login</string>
+    <string name="er_usename_required">Username is required.</string>
+    <string name="er_password_required">Password is required.</string>
+    <string name="er_incorrect_usrname_or_password">Username or Password is incorrect</string>
+    <string name="tab_attendance">Attendance</string>
+    <string name="tab_academics">Academics</string>
+
+</resources>
