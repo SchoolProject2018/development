@@ -22,12 +22,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText mEdtPassword;
     private Button mBtnLogin;
 
-    private final String DEFAULT_USERNAME = "";
-    private final String DEFAULT_PASSWORD= "";
-
+    private final String DEFAULT_USERNAME = "admin";
+    private final String DEFAULT_PASSWORD= "admin";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 

@@ -12,4 +12,8 @@
     <string name="tab_attendance">Attendance</string>
     <string name="tab_academics">Academics</string>
 
+    <string name="appHeaderText">Paatshala</string>
+    <string name="emptyRecentMsg">No Recent Activities</string>
+    <string name="title_activity_card_row">CardRowActivity</string>
+
 </resources>
