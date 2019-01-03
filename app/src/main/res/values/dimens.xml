@@ -5,4 +5,7 @@
     <dimen name="fab_margin">16dp</dimen>
 
     <dimen name="card_margin">5dp</dimen>
+
+    <dimen name="sp_header_35">35sp</dimen>
+    <dimen name="sp_sub_header_20">20sp</dimen>
 </resources>

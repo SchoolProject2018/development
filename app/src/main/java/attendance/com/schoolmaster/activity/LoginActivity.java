@@ -1,14 +1,13 @@
 package attendance.com.schoolmaster.activity;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
-
+import android.content.res.ColorStateList;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import attendance.com.schoolmaster.R;
 
@@ -33,18 +32,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         getSupportActionBar().hide();
 
-        mEdtUsename = (EditText) findViewById(R.id.edt_usename);
-        mEdtPassword = (EditText) findViewById(R.id.edt_password);
-        mBtnLogin = (Button) findViewById(R.id.btn_login);
+        mEdtUsename = (EditText) findViewById(R.id.login_et_name);
+        mEdtPassword = (EditText) findViewById(R.id.login_et_password);
+        mBtnLogin = (Button) findViewById(R.id.login_btn);
         mBtnLogin.setOnClickListener(this);
-
 
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btn_login:
+            case R.id.login_btn:
                 performlogin();
                 return;
             default:
@@ -99,7 +97,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void redirectToMainActivity() {
-        Intent i = new Intent(this,MainActivity.class);
+        // Intent i = new Intent(this,MainActivity.class);
+        Intent i = new Intent(this, DashboardActivity.class);
         startActivity(i);
     }
 

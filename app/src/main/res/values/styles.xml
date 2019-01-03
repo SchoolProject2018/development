@@ -3,9 +3,41 @@
     <!-- Base application theme.-->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorAccent">@color/color_accent</item>
+
+        <item name="colorControlNormal">@color/color_black_overlay</item>
+        <item name="colorControlActivated">@color/color_primary_dark</item>
+        <item name="colorControlHighlight">@color/color_primary_dark</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="TextLabel" parent="TextAppearance.Design.Hint">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/color_primary_dark</item>
+    </style>
+
+    <!-- EditText -->
+    <style name="PrimaryButton" parent="Theme.AppCompat">
+        <item name="colorButtonNormal">@color/color_primary</item>
+        <item name="colorControlHighlight">@color/color_primary_dark</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:padding">15dp</item>
+    </style>
+
+    <!-- LinkText -->
+    <style name="LinkedButton" parent="Theme.AppCompat">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="HeaderTextDashboard">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">10dp</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
@@ -23,6 +55,18 @@
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/color_black_overlay</item>
     </style>
 
 </resources>

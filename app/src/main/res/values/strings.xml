@@ -1,19 +1,36 @@
 <resources>
-    <string name="app_name">SchoolMaster</string>
+
     <string name="title_activity_login">Sign in</string>
 
-    <!-- Strings related to login -->
-    <string name="usename">Username</string>
+    <!-- Login Activity -->
+    <string name="tv_app_name">Paathshaala</string>
+    <string name="desc_name">Managing Student Activities</string>
+    <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">login</string>
     <string name="er_usename_required">Username is required.</string>
     <string name="er_password_required">Password is required.</string>
     <string name="er_incorrect_usrname_or_password">Username or Password is incorrect</string>
+    <string name="btn_fg_pass">Forgot Password</string>
     <string name="tab_attendance">Attendance</string>
     <string name="tab_academics">Academics</string>
 
-    <string name="appHeaderText">Paatshala</string>
     <string name="emptyRecentMsg">No Recent Activities</string>
     <string name="title_activity_card_row">CardRowActivity</string>
+
+    <string name="title_activity_profile">Profile</string>
+    <string name="header_text">Class A</string>
+    <string name="establish_text">22nd January 2018</string>
+    <string name="address_text">Mumbai 400016</string>
+
+    <!-- Dashboard Activity -->
+    <string name="chg_text">CHANGE</string>
+    <string name="today_text">TODAY</string>
+    <string name="lecture_text">LECTURES</string>
+    <string name="events_text">EVENTS</string>
+    <string name="attendance_text">ATTENDANCE</string>
+    <string name="title_activity_db">Dashboard</string>
+    <string name="batch_text">10:00 AM CLASS A Room No 2</string>
+    <string name="attendance_btn">TAKE ATTENDANCE</string>
 
 </resources>

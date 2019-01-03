@@ -1,6 +1,6 @@
 package attendance.com.schoolmaster.adapter;
 
-import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import attendance.com.schoolmaster.R;
+import attendance.com.schoolmaster.activity.ProfileActivity;
 import attendance.com.schoolmaster.model.StudlstModel;
 
 public class StudListAdapter extends RecyclerView.Adapter<StudListAdapter.ViewHolder> {
@@ -54,6 +55,14 @@ public class StudListAdapter extends RecyclerView.Adapter<StudListAdapter.ViewHo
             txt_hobbies = v.findViewById(R.id.hobbies);
             txt_numStud = v.findViewById(R.id.noOfStudent);
             txt_gender = v.findViewById(R.id.gender);
+
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent i = new Intent(view.getContext(), ProfileActivity.class);
+                    view.getContext().startActivity(i);
+                }
+            });
         }
     }
 }
