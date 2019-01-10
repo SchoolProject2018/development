@@ -28,5 +28,7 @@
         android:layout_margin="10dp"
         android:text="Present"
         android:layout_centerVertical="true"
+        android:checked="true"
+        android:theme="@style/switchStyle"
         />
 </RelativeLayout>

@@ -4,7 +4,7 @@
     <color name="color_primary_dark">#293B72</color>
     <color name="color_accent">#FF4081</color>
 
-    <color name="color_text">#FFFFFF</color>
+    <color name="color_text_white">#FFFFFF</color>
     <color name="color_tab_indicator">#2D2D2D</color>
 
     <color name="color_tab1">#00796B</color>
@@ -12,5 +12,12 @@
     <color name="color_tab3">#0D47A1</color>
 
     <color name="color_black_overlay">#66000000</color>
+    <color name="color_text_black">#000000</color>
+    <color name="color_light_grey">#808080</color>
+    <color name="color_seperator_grey">#E5E5E5</color>
+    <color name="color_text_grey">#6b6b6b</color>
+    <color name="color_view_bg">#c0c0c0</color>
+    <color name="color_switch_on">#009933</color>
+    <color name="color_switch_off">#ff4d4d</color>
 
 </resources>

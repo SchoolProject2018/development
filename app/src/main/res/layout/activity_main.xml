@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/tv_app_name"
                 android:textSize="18sp"
-                android:textColor="@color/color_text"/>
+                android:textColor="@color/color_text_white"/>
 
         </android.support.v7.widget.Toolbar>
 
@@ -34,8 +34,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/color_tab1"
-            app:tabSelectedTextColor="@color/color_text"
-            app:tabIndicatorColor="@color/color_text"/>
+            app:tabSelectedTextColor="@color/color_text_white"
+            app:tabIndicatorColor="@color/color_text_white"/>
 
     </android.support.design.widget.AppBarLayout>
 

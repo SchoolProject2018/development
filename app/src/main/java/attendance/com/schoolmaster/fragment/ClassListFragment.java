@@ -17,7 +17,7 @@ import attendance.com.schoolmaster.R;
 import attendance.com.schoolmaster.adapter.ClassListAdapter;
 import attendance.com.schoolmaster.model.ClasslstModel;
 
-public class ClassListFragment extends Fragment {
+public class ClassListFragment extends Fragment implements ClassListAdapter.OnItemClickListener {
 
     private View view;
     String[] cListArray = {"Class A", "Class B", "Class C", "Class D", "Class E","Class F","Class G"};
@@ -62,8 +62,18 @@ public class ClassListFragment extends Fragment {
             classDetList.add(cls);
         }
 
-        classAdapter = new ClassListAdapter(classDetList);
+        classAdapter = new ClassListAdapter(classDetList,this);
         mRecyclerView.setAdapter(classAdapter);
         classAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public void onItemClick(ClasslstModel classlstModel) {
+
+    }
+
+    @Override
+    public void onBtnAttendanceClick(ClasslstModel classlstModel) {
+
     }
 }

@@ -1,6 +1,8 @@
 package attendance.com.schoolmaster.model;
 
-public class ClasslstModel {
+import java.io.Serializable;
+
+public class ClasslstModel implements Serializable {
 
     private String name, rewards, studNo;
 

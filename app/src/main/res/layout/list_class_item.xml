@@ -14,41 +14,56 @@
             android:layout_height="wrap_content"
             android:padding="8dp">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="180dp"
-                android:layout_height="90dp"
-                android:padding="4dp" />
+            <!--<ImageView-->
+                <!--android:id="@+id/imageView"-->
+                <!--android:layout_width="180dp"-->
+                <!--android:layout_height="90dp"-->
+                <!--android:padding="4dp" />-->
 
             <TextView
                 android:id="@+id/classId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="5dp"
-                android:layout_toEndOf="@id/imageView"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:text="Class A"
+                android:layout_centerVertical="true"
+                />
 
             <TextView
                 android:id="@+id/noOfStudent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/classId"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@id/imageView"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+                android:layout_toEndOf="@id/classId"
+                android:text="20"
+                android:textSize="15sp"
+                />
 
             <TextView
                 android:id="@+id/rewards"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/noOfStudent"
-                android:layout_marginStart="5dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
-                android:layout_toEndOf="@id/imageView"
-                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                android:textStyle="bold" />
+                android:layout_toEndOf="@id/classId"
+                android:textStyle="bold"
+                android:text="Reward"
+                android:textSize="15sp"
+                />
+
+            <Button
+                android:id="@+id/btn_attendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Attendance"
+                style="@style/buttonStyle"
+                android:layout_alignParentRight="true"
+                />
 
         </RelativeLayout>
 

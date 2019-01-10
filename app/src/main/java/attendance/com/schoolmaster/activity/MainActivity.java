@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         viewPager.setAdapter(fragAdapter);
         tablayout.setupWithViewPager(viewPager);
 
-        getSupportActionBar().hide();
-
         tablayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override

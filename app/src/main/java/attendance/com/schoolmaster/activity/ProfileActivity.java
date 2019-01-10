@@ -31,8 +31,6 @@ public class ProfileActivity extends AppCompatActivity {
         mChart = (BarChart) findViewById(R.id.barchart_attend);
         mChart1 = (BarChart) findViewById(R.id.barchart_perform);
 
-        getSupportActionBar().hide();
-
         setTempData(6, 50);
     }
 

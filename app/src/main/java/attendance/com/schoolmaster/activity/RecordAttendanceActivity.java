@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,8 @@ public class RecordAttendanceActivity extends AppCompatActivity {
     private RecyclerView rvStudentList;
     private RecordAttendanceAdapter recordAttendanceAdapter;
     private List<StudlstModel> studentList;
+    private TextView  mTxtToolbarTitle;
+    private Toolbar mToolbar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -38,10 +42,13 @@ public class RecordAttendanceActivity extends AppCompatActivity {
         studentList = new ArrayList<>();
         rvStudentList = (RecyclerView) findViewById(R.id.rv_student_list);
         rvStudentList.setLayoutManager(new LinearLayoutManager(this));
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        mTxtToolbarTitle = (TextView) findViewById(R.id.txt_toolbar_title);
 
     }
 
     private void prepareData() {
+        mTxtToolbarTitle.setText(R.string.lbl_Attendance);
         setStudentDummyData();
         recordAttendanceAdapter = new RecordAttendanceAdapter(studentList);
         rvStudentList.setAdapter(recordAttendanceAdapter);

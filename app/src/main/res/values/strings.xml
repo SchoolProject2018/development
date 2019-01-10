@@ -33,4 +33,15 @@
     <string name="batch_text">10:00 AM CLASS A Room No 2</string>
     <string name="attendance_btn">TAKE ATTENDANCE</string>
 
+    <string name="menu_dashboard">Dashboard</string>
+    <string name="menu_attendance">Attendance</string>
+    <string name="lbl_dashboard">Dashboard</string>
+    <string name="lbl_Attendance">Attendance</string>
+    <string name="menu_legal">Legal</string>
+    <string name="menu_logout">Logout</string>
+    <string name="Classes">CLASSES</string>
+    <string name="sub_menu_privacy_policy">Privacy Policy</string>
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
 </resources>
