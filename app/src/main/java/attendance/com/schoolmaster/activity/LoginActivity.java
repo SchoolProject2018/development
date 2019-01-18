@@ -30,8 +30,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        getSupportActionBar().hide();
-
         mEdtUsename = (EditText) findViewById(R.id.login_et_name);
         mEdtPassword = (EditText) findViewById(R.id.login_et_password);
         mBtnLogin = (Button) findViewById(R.id.login_btn);

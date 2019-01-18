@@ -130,12 +130,21 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.nav_attendance:
                 //TODO start Attendance
                 break;
+            case R.id.nav_classes:
+                redirectToClasses();
+                break;
             default:
                 break;
         }
 
         mLytDashboardDrawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void redirectToClasses() {
+        Intent i = new Intent(this,MainActivity.class);
+        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(i);
     }
 
     private void redirectToDashboard() {
