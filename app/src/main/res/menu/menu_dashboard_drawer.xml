@@ -7,13 +7,19 @@
 
     <item
         android:id="@+id/nav_dashboard"
-        android:title="@string/menu_dashboard"> </item>
+        android:title="@string/menu_dashboard"
+        android:icon="@drawable/ic_dasboard"
+        />
     <item
         android:id="@+id/nav_attendance"
-        android:title="@string/menu_attendance"> </item>
+        android:title="@string/menu_attendance"
+        android:visible="false"
+        > </item>
     <item
         android:id="@+id/nav_classes"
-        android:title="@string/menu_classes"> </item>
+        android:title="@string/menu_classes"
+        android:icon="@drawable/ic_classes"
+        > </item>
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_logout"

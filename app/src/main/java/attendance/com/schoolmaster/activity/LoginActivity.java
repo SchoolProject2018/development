@@ -96,7 +96,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void redirectToMainActivity() {
         // Intent i = new Intent(this,MainActivity.class);
-        Intent i = new Intent(this, DashboardActivity.class);
+//        Intent i = new Intent(this, DashboardActivity.class);
+        Intent i = new Intent(this, HomePageActivity.class);
         startActivity(i);
     }
 

@@ -44,5 +44,12 @@
     <string name="sub_menu_privacy_policy">Privacy Policy</string>
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
     <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
-
+    <string name="lbl_my_class">My Class</string>
+    <string name="lbl_standard_colon">Standard:</string>
+    <string name="lbl_division_colon">Division:</string>
+    <string name="lbl_total_studnets_colon">Total Students:</string>
+    <string name="lbl_todays_attendance">Today&#8217;s Attendance</string>
+    <string name="lbl_monthly_attendance">Monthly Attendance</string>
+    <string name="lbl_grades">Class Grades</string>
+    <string name="lbl_events">Events</string>
 </resources>

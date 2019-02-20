@@ -133,6 +133,8 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
             case R.id.nav_classes:
                 redirectToClasses();
                 break;
+            case R.id.nav_logout:
+                finish();
             default:
                 break;
         }
