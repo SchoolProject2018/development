@@ -55,7 +55,7 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
     private PieChart mPiechartGrades;
     private HorizontalBarChart mBarChartaAttendanceToday;
     private BarChart mBarchartAttendanceMonthly;
-    private Button mBtnMarkAttendance;
+
 
     String[] cListArray = {"Class A", "Class B", "Class C", "Class D", "Class E","Class F","Class G"};
     String[] numArray = {"Number of Students : 45","Number of Students : 60","Number of Students : 55",
@@ -94,8 +94,6 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
         mPiechartGrades.setUsePercentValues(true);
         mBarChartaAttendanceToday = (HorizontalBarChart) rootview.findViewById(R.id.barchart_attendance_today);
         mBarchartAttendanceMonthly = (BarChart) rootview.findViewById(R.id.barchart_attendance_monthly);
-        mBtnMarkAttendance = (Button) rootview.findViewById(R.id.btn_mark_attendance);
-        mBtnMarkAttendance.setOnClickListener(this);
     }
 
     private void prepareData()
@@ -199,20 +197,11 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
         return data;
     }
 
-    void redirectToRecordAttendance()
-    {
-        Intent i = new Intent(getActivity(),RecordAttendanceActivity.class);
-        startActivity(i);
-    }
-
 
     @Override
     public void onClick(View view) {
         switch (view.getId())
         {
-            case R.id.btn_mark_attendance:
-                redirectToRecordAttendance();
-                break;
             default:
                 break;
         }

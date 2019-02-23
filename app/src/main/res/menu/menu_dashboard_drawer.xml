@@ -10,6 +10,12 @@
         android:title="@string/menu_dashboard"
         android:icon="@drawable/ic_dasboard"
         />
+
+    <item
+        android:id="@+id/nav_my_schedule"
+        android:title="@string/menu_my_schedule"
+        android:icon="@drawable/ic_my_schedule"
+        />
     <item
         android:id="@+id/nav_view_edit_attendance"
         android:title="@string/menu_view_edit_attendance"

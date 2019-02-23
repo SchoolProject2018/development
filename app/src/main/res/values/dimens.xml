@@ -12,7 +12,9 @@
     <dimen name="card_margin">5dp</dimen>
 
     <dimen name="sp_header_35">35sp</dimen>
+
     <dimen name="sp_sub_header_20">20sp</dimen>
+    <dimen name="fifteen_dp">15dp</dimen>
     <dimen name="thirty_dp">30dp</dimen>
     <dimen name="fifty_dp">50dp</dimen>
     <dimen name="onetwenty_dp">120dp</dimen>

@@ -43,84 +43,7 @@ public class RecordAttendanceAdapter  extends RecyclerView.Adapter<RecordAttenda
 
     @Override
     public void onBindViewHolder(RecordAttendanceAdapter.ViewHolder holder, int position) {
-
-        StudentAttendanceModel attendanceModel = mAttendanceList.get(position);
-        holder.txtRollNo.setText(attendanceModel.getRollNo());
-        holder.txtStudentName.setText(attendanceModel.getStudentName());
-
-        if(mIsEditable)
-        {
-            holder.imgLate.setEnabled(true);
-            if(attendanceModel.isLate())
-            {
-                holder.imgLate.setImageResource(R.drawable.ic_late_yellow);
-            }
-            else
-            {
-                holder.imgLate.setImageResource(R.drawable.ic_late_black);
-            }
-
-            holder.imgLeftEarly.setEnabled(true);
-
-            if(attendanceModel.isLeftEarly())
-            {
-                holder.imgLeftEarly.setImageResource(R.drawable.ic_left_early_blue);
-            }
-            else
-            {
-                holder.imgLeftEarly.setImageResource(R.drawable.ic_left_early_black);
-            }
-            holder.edtNote.setEnabled(true);
-            holder.edtNote.setText(attendanceModel.getNote());
-            holder.switchAttendance.setVisibility(View.VISIBLE);
-            holder.txtAttendance.setVisibility(View.GONE);
-            if(attendanceModel.isPresent())
-            {
-                holder.switchAttendance.setChecked(true);
-            }
-            else
-            {
-                holder.switchAttendance.setChecked(false);
-            }
-        }
-        else
-        {
-            holder.imgLate.setEnabled(false);
-            if(attendanceModel.isLate())
-            {
-                holder.imgLate.setImageResource(R.drawable.ic_late_yellow);
-            }
-            else
-            {
-                holder.imgLate.setImageResource(R.drawable.ic_late_black);
-            }
-
-            holder.imgLeftEarly.setEnabled(false);
-            if(attendanceModel.isLeftEarly())
-            {
-                holder.imgLeftEarly.setImageResource(R.drawable.ic_left_early_blue);
-            }
-            else
-            {
-                holder.imgLeftEarly.setImageResource(R.drawable.ic_left_early_black);
-            }
-            holder.edtNote.setEnabled(false);
-            holder.edtNote.setText(attendanceModel.getNote());
-            holder.switchAttendance.setVisibility(View.GONE);
-            holder.txtAttendance.setVisibility(View.VISIBLE);
-            if(attendanceModel.isPresent())
-            {
-                holder.txtAttendance.setText(R.string.lbl_present);
-                holder.txtAttendance.setTextColor(mCotext.getResources().getColor(R.color.color_switch_on_green));
-            }
-            else
-            {
-                holder.txtAttendance.setText(R.string.lbl_absent);
-                holder.txtAttendance.setTextColor(mCotext.getResources().getColor(R.color.color_switch_off_red));
-            }
-
-
-        }
+        holder.bind(mAttendanceList.get(position));
     }
 
     @Override
@@ -147,6 +70,87 @@ public class RecordAttendanceAdapter  extends RecyclerView.Adapter<RecordAttenda
             switchAttendance = v.findViewById(R.id.switch_attendance);
             edtNote = v.findViewById(R.id.edt_note);
             txtAttendance = v.findViewById(R.id.txt_attendance);
+        }
+
+            public void bind(final StudentAttendanceModel attendanceModel) {
+
+
+                txtRollNo.setText(attendanceModel.getRollNo());
+                txtStudentName.setText(attendanceModel.getStudentName());
+
+                if(mIsEditable)
+                {
+                    imgLate.setEnabled(true);
+                    if(attendanceModel.isLate())
+                    {
+                        imgLate.setImageResource(R.drawable.ic_late_yellow);
+                    }
+                    else
+                    {
+                        imgLate.setImageResource(R.drawable.ic_late_black);
+                    }
+
+                    imgLeftEarly.setEnabled(true);
+
+                    if(attendanceModel.isLeftEarly())
+                    {
+                        imgLeftEarly.setImageResource(R.drawable.ic_left_early_blue);
+                    }
+                    else
+                    {
+                        imgLeftEarly.setImageResource(R.drawable.ic_left_early_black);
+                    }
+                    edtNote.setEnabled(true);
+                    edtNote.setText(attendanceModel.getNote());
+                    switchAttendance.setVisibility(View.VISIBLE);
+                    txtAttendance.setVisibility(View.GONE);
+                    if(attendanceModel.isPresent())
+                    {
+                        switchAttendance.setChecked(true);
+                    }
+                    else
+                    {
+                        switchAttendance.setChecked(false);
+                    }
+                }
+                else
+                {
+                    imgLate.setEnabled(false);
+                    if(attendanceModel.isLate())
+                    {
+                        imgLate.setImageResource(R.drawable.ic_late_yellow);
+                    }
+                    else
+                    {
+                        imgLate.setImageResource(R.drawable.ic_late_black);
+                    }
+
+                    imgLeftEarly.setEnabled(false);
+                    if(attendanceModel.isLeftEarly())
+                    {
+                        imgLeftEarly.setImageResource(R.drawable.ic_left_early_blue);
+                    }
+                    else
+                    {
+                        imgLeftEarly.setImageResource(R.drawable.ic_left_early_black);
+                    }
+                    edtNote.setEnabled(false);
+                    edtNote.setText(attendanceModel.getNote());
+                    switchAttendance.setVisibility(View.GONE);
+                    txtAttendance.setVisibility(View.VISIBLE);
+                    if(attendanceModel.isPresent())
+                    {
+                        txtAttendance.setText(R.string.lbl_present);
+                        txtAttendance.setTextColor(mCotext.getResources().getColor(R.color.color_switch_on_green));
+                    }
+                    else
+                    {
+                        txtAttendance.setText(R.string.lbl_absent);
+                        txtAttendance.setTextColor(mCotext.getResources().getColor(R.color.color_switch_off_red));
+                    }
+
+
+                }
 
             imgLate.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -193,7 +197,7 @@ public class RecordAttendanceAdapter  extends RecyclerView.Adapter<RecordAttenda
                     }
                 }
             });
+            }
 
-        }
     }
 }

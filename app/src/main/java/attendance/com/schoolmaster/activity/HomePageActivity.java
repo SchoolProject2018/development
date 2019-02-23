@@ -1,6 +1,5 @@
 package attendance.com.schoolmaster.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -10,21 +9,15 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import attendance.com.schoolmaster.R;
-import attendance.com.schoolmaster.adapter.ClassListAdapter;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.DashboardFragment;
+import attendance.com.schoolmaster.fragment.MyScheduleFragment;
 import attendance.com.schoolmaster.fragment.ViewEditAttendanceFragment;
-import attendance.com.schoolmaster.model.ClasslstModel;
 
 /**
  * Created by akmirajk on 1/18/2019.
@@ -40,7 +33,8 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
     private TextView  mTxtToolbarTitle;
     public  static final String DASHBOARD_TAG = "dashboard_tag";
     public  static final String CLASSES_TAG = "classes_tag";
-    public static final String VIEW_EDIT_ATTENDANCE = "view_edit_attendance";
+    public static final String VIEW_EDIT_ATTENDANCE_TAG = "view_edit_attendance_tag";
+    public static final String MY_SCHEDULE_TAG ="my_schedule_tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +80,9 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
                 break;
             case R.id.nav_logout:
                 finish();
+
+            case R.id.nav_my_schedule:
+                redirectToMySchedule();
             default:
                 break;
         }
@@ -94,11 +91,19 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
         return true;
     }
 
+    private void redirectToMySchedule() {
+        mToolbar.setTitle(getString(R.string.menu_my_schedule));
+        Fragment myScheduleFragment = new MyScheduleFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, myScheduleFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
+    }
+
     private void redirectToViewEditAttendance() {
         mToolbar.setTitle(getString(R.string.menu_view_edit_attendance));
         Fragment viewEditAttendanceFragment = new ViewEditAttendanceFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, viewEditAttendanceFragment,VIEW_EDIT_ATTENDANCE).commit();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, viewEditAttendanceFragment,
+                VIEW_EDIT_ATTENDANCE_TAG).commit();
     }
 
 

@@ -65,4 +65,7 @@
     <string name="btn_ok">Ok</string>
     <string name="btn_submit">Submit</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="menu_my_schedule">My Schedule</string>
+    <string name="lbl_schedule_date">Schedule Date</string>
+    <string name="lbl_task_list">Task List</string>
 </resources>

@@ -40,8 +40,8 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
     private int mMonth;
     private int mYear;
     private Constants mConstants;
-    private RecyclerView rvStudentList;
-    private RecordAttendanceAdapter recordAttendanceAdapter;
+    private RecyclerView mRvStudentList;
+    private RecordAttendanceAdapter mRecordAttendanceAdapter;
     private List<StudentAttendanceModel> mAttendanceList;
     private boolean mAttendanceListEditable;
     private Button mBtnSubmit;
@@ -72,9 +72,9 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
         mAttendanceDateValue = mIncludeAttendanceDate.findViewById(R.id.txt_date_value);
         mIncludeAttendanceDate.setOnClickListener(this);
         mAttendanceList = new ArrayList<>();
-        rvStudentList = (RecyclerView) rootview.findViewById(R.id.rv_student_list);
-        rvStudentList.setLayoutManager(new LinearLayoutManager(mActivity));
-        rvStudentList.setNestedScrollingEnabled(false);
+        mRvStudentList = (RecyclerView) rootview.findViewById(R.id.rv_student_list);
+        mRvStudentList.setLayoutManager(new LinearLayoutManager(mActivity));
+        mRvStudentList.setNestedScrollingEnabled(false);
         mBtnSubmit = (Button) rootview.findViewById(R.id.btn_submit);
         mBtnSubmit.setOnClickListener(this);
         mImgedit = rootview.findViewById(R.id.img_edit);
@@ -92,15 +92,16 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
         mMonth = mCalendar.get(Calendar.MONTH);
         mDay = mCalendar.get(Calendar.DAY_OF_MONTH);
         mAttendanceDateHeader.setText(R.string.lbl_attendance_date);
+        updateScreen();
         setStudentDummyData();
         setButtonVisibility();
         setAttendanceAdapter();
     }
 
     private void setAttendanceAdapter() {
-        recordAttendanceAdapter = new RecordAttendanceAdapter(mAttendanceList,mActivity,mAttendanceListEditable);
-        rvStudentList.setAdapter(recordAttendanceAdapter);
-        recordAttendanceAdapter.notifyDataSetChanged();
+        mRecordAttendanceAdapter = new RecordAttendanceAdapter(mAttendanceList,mActivity,mAttendanceListEditable);
+        mRvStudentList.setAdapter(mRecordAttendanceAdapter);
+        mRecordAttendanceAdapter.notifyDataSetChanged();
     }
 
     private void setButtonVisibility() {
@@ -155,7 +156,9 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
     }
 
     private void updateScreen() {
-        //In future this method will be used to reload the student list
+        /**
+         * In future this method will be used to reload the student list
+         */
         mAttendanceDateValue.setText(mConstants.getSelectDateFormat()
                 .format(mCalendar.getTime()));
     }
