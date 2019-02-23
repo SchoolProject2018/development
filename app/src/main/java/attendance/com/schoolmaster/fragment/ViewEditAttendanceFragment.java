@@ -93,12 +93,8 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
         mDay = mCalendar.get(Calendar.DAY_OF_MONTH);
         mAttendanceDateHeader.setText(R.string.lbl_attendance_date);
         setStudentDummyData();
-
-
         setButtonVisibility();
         setAttendanceAdapter();
-
-
     }
 
     private void setAttendanceAdapter() {
@@ -108,16 +104,9 @@ public class ViewEditAttendanceFragment extends Fragment implements View.OnClick
     }
 
     private void setButtonVisibility() {
-        if(mAttendanceListEditable)
-        {
-            mBtnSubmit.setVisibility(View.VISIBLE);
-            mBtnCancel.setVisibility(View.VISIBLE);
+        if (mAttendanceListEditable) {
             mLytButton.setVisibility(View.VISIBLE);
-        }
-        else
-        {
-            mBtnSubmit.setVisibility(View.GONE);
-            mBtnCancel.setVisibility(View.GONE);
+        } else {
             mLytButton.setVisibility(View.GONE);
         }
     }

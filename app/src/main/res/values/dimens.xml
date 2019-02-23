@@ -17,7 +17,7 @@
     <dimen name="fifty_dp">50dp</dimen>
     <dimen name="onetwenty_dp">120dp</dimen>
     <dimen name="button_width">200dp</dimen>
-    <dimen name="small_button_width">100dp</dimen>
+    <dimen name="small_button_width">120dp</dimen>
 
     <dimen name="sixteen_sp">16sp</dimen>
     <dimen name="fourteen_sp">14sp</dimen>
