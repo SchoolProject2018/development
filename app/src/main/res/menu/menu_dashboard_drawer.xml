@@ -11,9 +11,9 @@
         android:icon="@drawable/ic_dasboard"
         />
     <item
-        android:id="@+id/nav_attendance"
-        android:title="@string/menu_attendance"
-        android:visible="false"
+        android:id="@+id/nav_view_edit_attendance"
+        android:title="@string/menu_view_edit_attendance"
+        android:icon="@drawable/ic_attendance"
         > </item>
     <item
         android:id="@+id/nav_classes"

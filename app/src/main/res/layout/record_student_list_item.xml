@@ -1,34 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-<TextView
-    android:id="@+id/txt_roll_no"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="1"
-    android:layout_margin="10dp"
-    android:textSize="20sp"
-    />
-<TextView
-    android:id="@+id/txt_student_name"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Akshaya Mirajkar"
-    android:layout_toRightOf="@+id/txt_roll_no"
-    android:layout_margin="10dp"
-    android:layout_centerVertical="true"
-    />
-    <android.support.v7.widget.SwitchCompat
-        android:id="@+id/switch_attendance"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-        android:text="Present"
-        android:layout_centerVertical="true"
-        android:checked="true"
-        android:theme="@style/switchStyle"
-        />
-</RelativeLayout>
+        android:layout_centerHorizontal="true"
+        android:elevation="12dp"
+        android:innerRadius="0dp"
+        android:thicknessRatio="1.9"
+        app:cardCornerRadius="10dp"
+        android:layout_marginBottom="@dimen/value_top_margin"
+    >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rounded_corner_white"
+            android:orientation="vertical">
+
+            <android.support.constraint.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="1dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7"
+                />
+            <TextView
+                android:id="@+id/txt_roll_no"
+                style="@style/roll_number_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:paddingTop="@dimen/value_top_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/value_top_margin"
+                />
+
+
+            <TextView
+                android:id="@+id/txt_student_name"
+                style="@style/roll_number_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Akshaya Mirajkar"
+                app:layout_constraintLeft_toRightOf="@+id/txt_roll_no"
+                android:paddingTop="@dimen/value_top_margin"
+                android:layout_marginLeft="@dimen/value_top_margin"
+                android:paddingBottom="@dimen/value_top_margin"
+                android:layout_marginRight="@dimen/onetwenty_dp"
+                />
+
+
+
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switch_attendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Present"
+                android:layout_centerVertical="true"
+                android:checked="true"
+                android:theme="@style/switchStyle"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                android:paddingTop="@dimen/value_top_margin"
+                android:paddingBottom="@dimen/value_top_margin"
+
+                />
+
+            <TextView
+                android:id="@+id/txt_attendance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Present"
+                android:layout_centerVertical="true"
+                app:layout_constraintLeft_toRightOf="@+id/guideline"
+                android:paddingTop="@dimen/value_top_margin"
+                android:paddingBottom="@dimen/value_top_margin"
+                android:theme="@style/dashboard_value_style"
+                android:visibility="gone"
+                />
+
+
+
+            <LinearLayout
+                android:id="@+id/lyt_late"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/txt_student_name"
+                app:layout_constraintRight_toLeftOf="@+id/lyt_left_early"
+                android:layout_marginTop="@dimen/value_top_margin"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/value_top_margin"
+                >
+                <ImageView
+                    android:id="@+id/img_late"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_late_black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_late"
+                    style="@style/dashboard_value_style"
+                   android:layout_marginTop="@dimen/value_top_margin"
+                    />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/lyt_left_early"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@+id/txt_student_name"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginTop="@dimen/value_top_margin"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/value_top_margin"
+                >
+                <ImageView
+                    android:id="@+id/img_left_early"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_left_early_black"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_left_early"
+                    style="@style/dashboard_value_style"
+                    android:layout_marginTop="@dimen/value_top_margin"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_header_note"
+                style="@style/dashboard_header_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_note_colon"
+                app:layout_constraintLeft_toLeftOf="@id/txt_student_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_student_name" />
+
+            <EditText
+                android:id="@+id/edt_note"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/txt_student_name"
+                app:layout_constraintTop_toBottomOf="@+id/txt_header_note"
+                style="@style/edittext_note_style"
+                />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>

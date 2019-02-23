@@ -23,6 +23,7 @@ import attendance.com.schoolmaster.R;
 import attendance.com.schoolmaster.adapter.ClassListAdapter;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.DashboardFragment;
+import attendance.com.schoolmaster.fragment.ViewEditAttendanceFragment;
 import attendance.com.schoolmaster.model.ClasslstModel;
 
 /**
@@ -39,6 +40,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
     private TextView  mTxtToolbarTitle;
     public  static final String DASHBOARD_TAG = "dashboard_tag";
     public  static final String CLASSES_TAG = "classes_tag";
+    public static final String VIEW_EDIT_ATTENDANCE = "view_edit_attendance";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,8 +78,8 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
             case R.id.nav_dashboard:
                 redirectToDashboard();
                 break;
-            case R.id.nav_attendance:
-                //TODO start Attendance
+            case R.id.nav_view_edit_attendance:
+                redirectToViewEditAttendance();
                 break;
             case R.id.nav_classes:
                 redirectToClasses();
@@ -90,6 +92,13 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
 
         mLytDashboardDrawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void redirectToViewEditAttendance() {
+        mToolbar.setTitle(getString(R.string.menu_view_edit_attendance));
+        Fragment viewEditAttendanceFragment = new ViewEditAttendanceFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, viewEditAttendanceFragment,VIEW_EDIT_ATTENDANCE).commit();
     }
 
 

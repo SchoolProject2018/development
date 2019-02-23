@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.github.mikephil.charting.charts.BarChart;
@@ -44,7 +45,7 @@ import attendance.com.schoolmaster.model.ClasslstModel;
  * Created by akmirajk on 1/18/2019.
  */
 
-public class DashboardFragment extends Fragment implements ClassListAdapter.OnItemClickListener {
+public class DashboardFragment extends Fragment implements ClassListAdapter.OnItemClickListener,View.OnClickListener {
 
 //    private TextView mTxtDate;
     private Activity mActivity;
@@ -54,6 +55,7 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
     private PieChart mPiechartGrades;
     private HorizontalBarChart mBarChartaAttendanceToday;
     private BarChart mBarchartAttendanceMonthly;
+    private Button mBtnMarkAttendance;
 
     String[] cListArray = {"Class A", "Class B", "Class C", "Class D", "Class E","Class F","Class G"};
     String[] numArray = {"Number of Students : 45","Number of Students : 60","Number of Students : 55",
@@ -92,6 +94,8 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
         mPiechartGrades.setUsePercentValues(true);
         mBarChartaAttendanceToday = (HorizontalBarChart) rootview.findViewById(R.id.barchart_attendance_today);
         mBarchartAttendanceMonthly = (BarChart) rootview.findViewById(R.id.barchart_attendance_monthly);
+        mBtnMarkAttendance = (Button) rootview.findViewById(R.id.btn_mark_attendance);
+        mBtnMarkAttendance.setOnClickListener(this);
     }
 
     private void prepareData()
@@ -195,5 +199,22 @@ public class DashboardFragment extends Fragment implements ClassListAdapter.OnIt
         return data;
     }
 
+    void redirectToRecordAttendance()
+    {
+        Intent i = new Intent(getActivity(),RecordAttendanceActivity.class);
+        startActivity(i);
+    }
 
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId())
+        {
+            case R.id.btn_mark_attendance:
+                redirectToRecordAttendance();
+                break;
+            default:
+                break;
+        }
+    }
 }

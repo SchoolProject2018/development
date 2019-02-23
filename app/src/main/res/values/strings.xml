@@ -34,7 +34,7 @@
     <string name="attendance_btn">TAKE ATTENDANCE</string>
 
     <string name="menu_dashboard">Dashboard</string>
-    <string name="menu_attendance">Attendance</string>
+    <string name="menu_view_edit_attendance">View and Edit Attendance</string>
     <string name="menu_classes">Classes</string>
     <string name="lbl_dashboard">Dashboard</string>
     <string name="lbl_Attendance">Attendance</string>
@@ -52,4 +52,17 @@
     <string name="lbl_monthly_attendance">Monthly Attendance</string>
     <string name="lbl_grades">Class Grades</string>
     <string name="lbl_events">Events</string>
+    <string name="lbl_class_information">Class Information</string>
+    <string name="lbl_date_colon">Date:</string>
+    <string name="lbl_roll_number_colon">Roll Number:</string>
+    <string name="lbl_student_name_colon">Student Name:</string>
+    <string name="lbl_late">Late</string>
+    <string name="lbl_left_early">Left Early</string>
+    <string name="lbl_note_colon">Note:</string>
+    <string name="lbl_present">Present</string>
+    <string name="lbl_absent">Absent</string>
+    <string name="lbl_attendance_date">Attendance Date</string>
+    <string name="btn_ok">Ok</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_cancel">Cancel</string>
 </resources>
