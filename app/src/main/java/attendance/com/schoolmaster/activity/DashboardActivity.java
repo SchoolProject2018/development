@@ -128,7 +128,6 @@ public class DashboardActivity extends AppCompatActivity implements NavigationVi
                 redirectToDashboard();
                 break;
             case R.id.nav_view_edit_attendance:
-                //TODO start Attendance
                 break;
             case R.id.nav_classes:
                 redirectToClasses();

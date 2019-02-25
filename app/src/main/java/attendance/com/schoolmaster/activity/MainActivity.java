@@ -119,17 +119,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
     }
 
     private void navigateToAcademics() {
-        /*Fragment academicsFragment = new Academics();
-        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-        ft.replace(R.id.main, academicsFragment);
-        ft.commit();*/
     }
 
     private void navigateToAttendance() {
 
-            /*Fragment attendanceFragment = new Attendance();
-            FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-            ft.replace(R.id.main, attendanceFragment);
-            ft.commit();*/
+
     }
 }
