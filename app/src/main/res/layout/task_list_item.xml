@@ -26,13 +26,19 @@
             app:layout_constraintGuide_percent="0.6"
             />
 
+        <ImageView
+            android:id="@+id/img_task_category"
+            android:layout_width="@dimen/value_top_margin"
+            android:layout_height="match_parent"
+            />
+
         <CheckBox
             android:id="@+id/chk_task"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/value_top_margin"
             android:layout_marginTop="@dimen/value_top_margin"
-            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/img_task_category"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="@dimen/value_top_margin"
             app:layout_constraintBottom_toBottomOf="parent"

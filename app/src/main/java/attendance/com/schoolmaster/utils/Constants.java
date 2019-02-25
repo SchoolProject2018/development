@@ -11,6 +11,7 @@ public class Constants {
 
     public final SimpleDateFormat attendanceDateFormat = new SimpleDateFormat("E MMMM dd,yyyy hh:mm a");
     public final SimpleDateFormat selectDateFormat = new SimpleDateFormat("E MMMM dd,yyyy", Locale.ENGLISH);
+    public final SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm a");
 
 
     public SimpleDateFormat getAttendanceDateFormat() {
@@ -19,5 +20,9 @@ public class Constants {
 
     public SimpleDateFormat getSelectDateFormat() {
         return selectDateFormat;
+    }
+
+    public SimpleDateFormat getTimeFormat() {
+        return timeFormat;
     }
 }

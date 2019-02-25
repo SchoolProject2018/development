@@ -3,6 +3,7 @@ package attendance.com.schoolmaster.fragment;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,14 +15,17 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
 import attendance.com.schoolmaster.R;
+import attendance.com.schoolmaster.activity.AddTaskActivity;
 import attendance.com.schoolmaster.activity.RecordAttendanceActivity;
 import attendance.com.schoolmaster.adapter.TaskAdapter;
+import attendance.com.schoolmaster.enums.TaskCategory;
 import attendance.com.schoolmaster.model.TaskModel;
 import attendance.com.schoolmaster.utils.Constants;
 
@@ -44,6 +48,8 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
     private RecyclerView mRvTaskList;
     private TaskAdapter mTaskAdapter;
     private List<TaskModel> mTaskList;
+    private FloatingActionButton mBtnFloatingAdd;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -72,6 +78,8 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
         mRvTaskList = (RecyclerView) rootview.findViewById(R.id.rv_task_list);
         mRvTaskList.setLayoutManager(new LinearLayoutManager(mActivity));
         mRvTaskList.setNestedScrollingEnabled(false);
+        mBtnFloatingAdd = rootview.findViewById(R.id.btn_floating_add);
+        mBtnFloatingAdd.setOnClickListener(this);
     }
 
     private void prepareData()
@@ -88,7 +96,7 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
     }
 
     private void setTaskAdapter() {
-        mTaskAdapter = new TaskAdapter(mTaskList);
+        mTaskAdapter = new TaskAdapter(mTaskList,mActivity);
         mRvTaskList.setAdapter(mTaskAdapter);
         mTaskAdapter.notifyDataSetChanged();
     }
@@ -123,9 +131,17 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
             case R.id.btn_mark_attendance:
                 redirectToRecordAttendance();
                 break;
+            case R.id.btn_floating_add:
+                redirectToAddTask();
+                break;
             default:
                 break;
         }
+    }
+
+    private void redirectToAddTask() {
+        Intent i = new Intent(getActivity(),AddTaskActivity.class);
+        startActivity(i);
     }
 
     void redirectToRecordAttendance()
@@ -144,15 +160,25 @@ public class MyScheduleFragment extends Fragment implements View.OnClickListener
         }
 
     private void setTaskDummyData() {
-        TaskModel t1 = new TaskModel(false,"7:30 AM To 8:00 AM","Science Lecture for Fourth A");
-        TaskModel t2 = new TaskModel(false,"8:30 AM To 9:00 AM","Chemisrty Lecture for Ninth B");
-        TaskModel t3 = new TaskModel(false,"11:30 AM To 12:00 AM","Science Lecture for Seventh A");
-        TaskModel t4 = new TaskModel(false,"12:00 AM To 12:30 AM","Chemistry Lecture for Ninth A");
+        TaskModel t1 = new TaskModel(false,"7:30 AM To 8:00 AM","Science Lecture for Fourth A",
+                TaskCategory.STANDARD);
+        TaskModel t2 = new TaskModel(false,"8:30 AM To 9:00 AM","Sports Day Discussion Meeting",TaskCategory.HIGN);
+        TaskModel t3 = new TaskModel(false,"10:30 AM To 11:00 AM","Science Lecture for Seventh A",TaskCategory.STANDARD);
+        TaskModel t4 = new TaskModel(false,"11:00 AM To 11:10 AM","Plan for parents Metting",TaskCategory.LOW);
+        TaskModel t5 = new TaskModel(false,"11:30 AM To 11:45 AM","Prepare Notes for Science Lecture",TaskCategory.NORMAL);
+//        TaskModel t6 = new TaskModel(false,"12:00 AM To 12:30 AM","Chemistry Lecture for Ninth A");
+//        TaskModel t7 = new TaskModel(false,"12:00 AM To 12:30 AM","Chemistry Lecture for Ninth A");
+//        TaskModel t8 = new TaskModel(false,"12:00 AM To 12:30 AM","Chemistry Lecture for Ninth A");
+//        TaskModel t9 = new TaskModel(false,"12:00 AM To 12:30 AM","Chemistry Lecture for Ninth A");
 
         mTaskList.add(t1);
         mTaskList.add(t2);
         mTaskList.add(t3);
         mTaskList.add(t4);
-
+        mTaskList.add(t5);
+//        mTaskList.add(t6);
+//        mTaskList.add(t7);
+//        mTaskList.add(t8);
+//        mTaskList.add(t9);
     }
 }

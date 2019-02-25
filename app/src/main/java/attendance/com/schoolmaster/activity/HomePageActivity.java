@@ -17,6 +17,7 @@ import attendance.com.schoolmaster.R;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.DashboardFragment;
 import attendance.com.schoolmaster.fragment.MyScheduleFragment;
+import attendance.com.schoolmaster.fragment.StudListFragment;
 import attendance.com.schoolmaster.fragment.ViewEditAttendanceFragment;
 
 /**
@@ -35,6 +36,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
     public  static final String CLASSES_TAG = "classes_tag";
     public static final String VIEW_EDIT_ATTENDANCE_TAG = "view_edit_attendance_tag";
     public static final String MY_SCHEDULE_TAG ="my_schedule_tag";
+    public static final String STUDENT_LIST_TAG = "student_list_tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,12 +85,24 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
 
             case R.id.nav_my_schedule:
                 redirectToMySchedule();
+
+            case R.id.nav_studnets:
+                redirectToStudents();
+                break;
             default:
                 break;
         }
 
         mLytDashboardDrawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void redirectToStudents() {
+        mToolbar.setTitle(getString(R.string.menu_students));
+        Fragment studentListFragment = new StudListFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, studentListFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
+
     }
 
     private void redirectToMySchedule() {

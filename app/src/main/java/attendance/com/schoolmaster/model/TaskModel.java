@@ -1,5 +1,7 @@
 package attendance.com.schoolmaster.model;
 
+import attendance.com.schoolmaster.enums.TaskCategory;
+
 /**
  * Created by akmirajk on 2/23/2019.
  */
@@ -9,11 +11,14 @@ public class TaskModel {
     private boolean isCompleted;
     private String taskTime;
     private String taskDesc;
+    private TaskCategory taskCategory;
 
-    public TaskModel(boolean isCompleted, String taskTime, String taskDesc) {
+
+    public TaskModel(boolean isCompleted, String taskTime, String taskDesc,TaskCategory taskCategory) {
         this.isCompleted = isCompleted;
         this.taskTime = taskTime;
         this.taskDesc = taskDesc;
+        this.taskCategory = taskCategory;
     }
 
     public boolean isCompleted() {
@@ -38,5 +43,13 @@ public class TaskModel {
 
     public void setTaskDesc(String taskDesc) {
         this.taskDesc = taskDesc;
+    }
+
+    public TaskCategory getTaskCategory() {
+        return taskCategory;
+    }
+
+    public void setTaskCategory(TaskCategory taskCategory) {
+        this.taskCategory = taskCategory;
     }
 }

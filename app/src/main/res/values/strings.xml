@@ -36,6 +36,7 @@
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_view_edit_attendance">View and Edit Attendance</string>
     <string name="menu_classes">Classes</string>
+    <string name="menu_students">Studnets</string>
     <string name="lbl_dashboard">Dashboard</string>
     <string name="lbl_Attendance">Attendance</string>
     <string name="menu_legal">Legal</string>
@@ -67,5 +68,15 @@
     <string name="btn_cancel">Cancel</string>
     <string name="menu_my_schedule">My Schedule</string>
     <string name="lbl_schedule_date">Schedule Date</string>
+    <string name="lbl_task_date">Task Date</string>
     <string name="lbl_task_list">Task List</string>
+    <string name="lbl_add_task">Add Task</string>
+    <string name="lbl_from_time">From Time</string>
+    <string name="lbl_to_time">To Time</string>
+    <string name="lbl_task_category">Task Category</string>
+    <string name="btn_high">High</string>
+    <string name="btn_normal">Normal</string>
+    <string name="btn_low">Low</string>
+    <string name="btn_standard">Standard</string>
+
 </resources>
