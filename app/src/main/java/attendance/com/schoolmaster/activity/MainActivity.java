@@ -17,7 +17,7 @@ import attendance.com.schoolmaster.R;
 import attendance.com.schoolmaster.adapter.TabFragmentAdapter;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.RecentListFragment;
-import attendance.com.schoolmaster.fragment.StudListFragment;
+import attendance.com.schoolmaster.fragment.StudentListFragment;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         TabFragmentAdapter fragAdapter = new TabFragmentAdapter(getSupportFragmentManager());
         fragAdapter.addFragment(new ClassListFragment(), "Class");
-        fragAdapter.addFragment(new StudListFragment(), "Students");
+        fragAdapter.addFragment(new StudentListFragment(), "Students");
         fragAdapter.addFragment(new RecentListFragment(), "Recents");
 
         viewPager.setAdapter(fragAdapter);

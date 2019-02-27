@@ -11,20 +11,24 @@
     <dimen name="button_width">200dp</dimen>
     <dimen name="small_button_width">120dp</dimen>
     <dimen name="floating_button_margin">20dp</dimen>
+    <dimen name="student_detail_img_size">30dp</dimen>
 
     <dimen name="sp_header_35">35sp</dimen>
     <dimen name="sp_sub_header_20">20sp</dimen>
 
+    <dimen name="zero_dp">0dp</dimen>
     <dimen name="two_dp">2dp</dimen>
     <dimen name="fifteen_dp">15dp</dimen>
     <dimen name="thirty_dp">30dp</dimen>
+    <dimen name="fourty_dp">40dp</dimen>
     <dimen name="fifty_dp">50dp</dimen>
+    <dimen name="eighty_dp">80dp</dimen>
     <dimen name="onetwenty_dp">120dp</dimen>
 
-
-    <dimen name="sixteen_sp">16sp</dimen>
     <dimen name="fourteen_sp">14sp</dimen>
     <dimen name="fifteen_sp">15sp</dimen>
+    <dimen name="sixteen_sp">16sp</dimen>
+    <dimen name="eighteen_sp">18sp</dimen>
     <dimen name="twenty_sp">20sp</dimen>
 
 </resources>

@@ -137,6 +137,11 @@
         <item name="android:textSize">@dimen/sixteen_sp</item>
         <item name="android:textStyle">normal</item>
     </style>
+    <style name="student_name_style">
+        <item name="android:textColor">@color/color_text_black</item>
+        <item name="android:textSize">@dimen/eighteen_sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
     <style name="DialogTheme" parent="Theme.AppCompat.Light.Dialog" >
         <item name="colorAccent">@color/color_primary</item>
         <item name="android:textAllCaps">false</item>
@@ -145,5 +150,11 @@
     <style name="edittext_note_style">
         <item name="android:textColor">@color/color_text_black</item>
         <item name="android:textSize">@dimen/fourteen_sp</item>
+    </style>
+
+    <style name="student_name_header_style">
+        <item name="android:textColor">@color/color_primary</item>
+        <item name="android:textSize">@dimen/twenty_sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

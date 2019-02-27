@@ -17,7 +17,7 @@ import attendance.com.schoolmaster.R;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.DashboardFragment;
 import attendance.com.schoolmaster.fragment.MyScheduleFragment;
-import attendance.com.schoolmaster.fragment.StudListFragment;
+import attendance.com.schoolmaster.fragment.StudentListFragment;
 import attendance.com.schoolmaster.fragment.ViewEditAttendanceFragment;
 
 /**
@@ -85,7 +85,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
 
             case R.id.nav_my_schedule:
                 redirectToMySchedule();
-
+                break;
             case R.id.nav_studnets:
                 redirectToStudents();
                 break;
@@ -99,7 +99,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
 
     private void redirectToStudents() {
         mToolbar.setTitle(getString(R.string.menu_students));
-        Fragment studentListFragment = new StudListFragment();
+        Fragment studentListFragment = new StudentListFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.lyt_homepage, studentListFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
 

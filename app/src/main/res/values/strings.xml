@@ -78,5 +78,7 @@
     <string name="btn_normal">Normal</string>
     <string name="btn_low">Low</string>
     <string name="btn_standard">Standard</string>
+    <string name="lbl_personal_information">Personal Information</string>
+    <string name="lbl_class_teacher_colon">Class Teacher:</string>
 
 </resources>
