@@ -14,6 +14,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import attendance.com.schoolmaster.R;
+import attendance.com.schoolmaster.fragment.AddEditPerformanceFragment;
 import attendance.com.schoolmaster.fragment.ClassListFragment;
 import attendance.com.schoolmaster.fragment.DashboardFragment;
 import attendance.com.schoolmaster.fragment.MyScheduleFragment;
@@ -37,6 +38,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
     public static final String VIEW_EDIT_ATTENDANCE_TAG = "view_edit_attendance_tag";
     public static final String MY_SCHEDULE_TAG ="my_schedule_tag";
     public static final String STUDENT_LIST_TAG = "student_list_tag";
+    public static final String ADD_EDIT_PERFORMANCE_TAG = "add_edit_performance_tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +91,9 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
             case R.id.nav_studnets:
                 redirectToStudents();
                 break;
+            case R.id.nav_add_edit_performance:
+                redirectToAddEditPerformance();
+                break;
             default:
                 break;
         }
@@ -97,11 +102,19 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
         return true;
     }
 
+    private void redirectToAddEditPerformance() {
+        mToolbar.setTitle(R.string.menu_add_edit_performance);
+        Fragment addEditPerformanceFragment = new AddEditPerformanceFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, addEditPerformanceFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
+
+    }
+
     private void redirectToStudents() {
         mToolbar.setTitle(getString(R.string.menu_students));
         Fragment studentListFragment = new StudentListFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, studentListFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, studentListFragment, STUDENT_LIST_TAG).commit();
 
     }
 
@@ -109,7 +122,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
         mToolbar.setTitle(getString(R.string.menu_my_schedule));
         Fragment myScheduleFragment = new MyScheduleFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, myScheduleFragment, VIEW_EDIT_ATTENDANCE_TAG).commit();
+        fragmentManager.beginTransaction().replace(R.id.lyt_homepage, myScheduleFragment, MY_SCHEDULE_TAG).commit();
     }
 
     private void redirectToViewEditAttendance() {
@@ -117,7 +130,7 @@ public class HomePageActivity extends AppCompatActivity  implements NavigationVi
         Fragment viewEditAttendanceFragment = new ViewEditAttendanceFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().replace(R.id.lyt_homepage, viewEditAttendanceFragment,
-                VIEW_EDIT_ATTENDANCE_TAG).commit();
+                ADD_EDIT_PERFORMANCE_TAG).commit();
     }
 
 

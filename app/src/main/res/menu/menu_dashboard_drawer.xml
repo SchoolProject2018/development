@@ -31,6 +31,12 @@
         android:title="@string/menu_students"
         android:icon="@drawable/ic_students"
         > </item>
+
+    <item
+        android:id="@+id/nav_add_edit_performance"
+        android:title="@string/menu_add_edit_performance"
+        android:icon="@drawable/ic_add_edit_performance"
+        > </item>
     <item
         android:id="@+id/nav_logout"
         android:icon="@drawable/ic_logout"

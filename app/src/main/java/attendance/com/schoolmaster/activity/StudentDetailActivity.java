@@ -72,6 +72,7 @@ public class StudentDetailActivity extends AppCompatActivity {
     }
 
     private void prepareData() {
+        mCollapsingToolbarLayout.setCollapsedTitleTextAppearance(R.style.collapsedappbar_textstyle);
         setDummyData();
         mAppbarlayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             boolean isShow = true;

@@ -36,7 +36,8 @@
     <string name="menu_dashboard">Dashboard</string>
     <string name="menu_view_edit_attendance">View and Edit Attendance</string>
     <string name="menu_classes">Classes</string>
-    <string name="menu_students">Studnets</string>
+    <string name="menu_students">Students</string>
+    <string name="menu_add_edit_performance">Add and Edit Performance</string>
     <string name="lbl_dashboard">Dashboard</string>
     <string name="lbl_Attendance">Attendance</string>
     <string name="menu_legal">Legal</string>

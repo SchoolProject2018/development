@@ -110,14 +110,14 @@
 
     <style name="dashboard_header_style">
         <item name="android:textColor">@color/color_text_black</item>
-        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
 
     <style name="dashboard_value_style">
         <item name="android:textColor">@color/color_text_black</item>
-        <item name="android:textSize">@dimen/fourteen_sp</item>
+        <item name="android:textSize">@dimen/sixteen_sp</item>
         <item name="android:textStyle">normal</item>
     </style>
 
@@ -155,6 +155,11 @@
     <style name="student_name_header_style">
         <item name="android:textColor">@color/color_primary</item>
         <item name="android:textSize">@dimen/twenty_sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="collapsedappbar_textstyle" >
+        <item name="android:textColor">@color/color_text_white</item>
         <item name="android:textStyle">bold</item>
     </style>
 </resources>
