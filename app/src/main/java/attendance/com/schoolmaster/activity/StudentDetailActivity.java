@@ -43,8 +43,8 @@ public class StudentDetailActivity extends AppCompatActivity {
     private TextView txtStudentName;
     private ImageView imgMotherPhoto;
     private ImageView imgFatherPhoto;
-    private PieChart mPiechartGrades;
-    private BarChart mBarchartAttendanceMonthly;
+    private PieChart mPiechartMonthlyAttendance;
+    private BarChart mBarchartGrades;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,9 +66,9 @@ public class StudentDetailActivity extends AppCompatActivity {
         txtStudentName = (TextView) findViewById(R.id.txt_student_name);
         imgMotherPhoto = (ImageView) findViewById(R.id.img_mother_photo);
         imgFatherPhoto = (ImageView) findViewById(R.id.img_father_photo);
-        mPiechartGrades = (PieChart) findViewById(R.id.piechart_grades);
-        mPiechartGrades.setUsePercentValues(true);
-        mBarchartAttendanceMonthly = (BarChart) findViewById(R.id.barchart_attendance_monthly);
+        mPiechartMonthlyAttendance = (PieChart) findViewById(R.id.piechart_monthly_attendance);
+        mPiechartMonthlyAttendance.setUsePercentValues(true);
+        mBarchartGrades = (BarChart) findViewById(R.id.barchart_gardes);
     }
 
     private void prepareData() {
@@ -114,7 +114,7 @@ public class StudentDetailActivity extends AppCompatActivity {
             imgFatherPhoto.setImageDrawable(fatherDrawable);
         }
 
-        mBarchartAttendanceMonthly.setData(getTempData(4,60,getString(R.string.lbl_monthly_attendance)));
+        mBarchartGrades.setData(getTempData(4,60,getString(R.string.lbl_monthly_attendance)));
         getAttendanceChartData();
 
     }
@@ -182,7 +182,7 @@ public class StudentDetailActivity extends AppCompatActivity {
         set1.setColors(ColorTemplate.COLORFUL_COLORS);
         BarData data = new BarData(set1);
 
-        mBarchartAttendanceMonthly.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
+        mBarchartGrades.getXAxis().setValueFormatter(new IndexAxisValueFormatter(labels));
 //        data.setBarWidth(barWidth);
         return data;
     }
@@ -193,11 +193,10 @@ public class StudentDetailActivity extends AppCompatActivity {
 
 
         ArrayList<PieEntry> yvalues = new ArrayList<PieEntry>();
-        yvalues.add(new PieEntry(45f, "A+"));
-        yvalues.add(new PieEntry(15f, "A"));
-        yvalues.add(new PieEntry(12f, "B"));
-        yvalues.add(new PieEntry(20f, "C"));
-        yvalues.add(new PieEntry(8f, "F"));
+        yvalues.add(new PieEntry(60f, "Present"));
+        yvalues.add(new PieEntry(20f, "Absent"));
+        yvalues.add(new PieEntry(10f, "Left Early"));
+        yvalues.add(new PieEntry(10f, "Late"));
 
 
         PieDataSet dataSet = new PieDataSet(yvalues, "Grade Results");
@@ -205,10 +204,10 @@ public class StudentDetailActivity extends AppCompatActivity {
         Description description = new Description();
         description.setText("Grades");
 
-        mPiechartGrades.setDescription(description);
-        mPiechartGrades.setEntryLabelColor(Color.BLACK);
-        mPiechartGrades.setEntryLabelTextSize(8f);
-        mPiechartGrades.setDrawHoleEnabled(false);
+        mPiechartMonthlyAttendance.setDescription(description);
+        mPiechartMonthlyAttendance.setEntryLabelColor(Color.BLACK);
+        mPiechartMonthlyAttendance.setEntryLabelTextSize(8f);
+        mPiechartMonthlyAttendance.setDrawHoleEnabled(false);
 //        pieChart.setTransparentCircleRadius(58f);
 //
 //        pieChart.setHoleRadius(58f);
@@ -219,7 +218,7 @@ public class StudentDetailActivity extends AppCompatActivity {
         data.setValueTextSize(10f);
         data.setValueTextColor(Color.DKGRAY);
         data.setValueFormatter(new PercentFormatter());
-        mPiechartGrades.setData(data);
+        mPiechartMonthlyAttendance.setData(data);
     }
 
 

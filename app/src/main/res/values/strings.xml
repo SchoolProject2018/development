@@ -3,7 +3,7 @@
     <string name="title_activity_login">Sign in</string>
 
     <!-- Login Activity -->
-    <string name="tv_app_name">Paathshaala</string>
+    <string name="app_name">Paathshala</string>
     <string name="desc_name">Managing Student Activities</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
@@ -38,6 +38,7 @@
     <string name="menu_classes">Classes</string>
     <string name="menu_students">Students</string>
     <string name="menu_add_edit_performance">Add and Edit Performance</string>
+    <string name="menu_attendance_report">Attendance Report</string>
     <string name="lbl_dashboard">Dashboard</string>
     <string name="lbl_Attendance">Attendance</string>
     <string name="menu_legal">Legal</string>
@@ -52,7 +53,7 @@
     <string name="lbl_total_studnets_colon">Total Students:</string>
     <string name="lbl_todays_attendance">Today&#8217;s Attendance</string>
     <string name="lbl_monthly_attendance">Monthly Attendance</string>
-    <string name="lbl_grades">Class Grades</string>
+    <string name="lbl_class_grades">Class Grades</string>
     <string name="lbl_events">Events</string>
     <string name="lbl_class_information">Class Information</string>
     <string name="lbl_date_colon">Date:</string>
@@ -67,6 +68,7 @@
     <string name="btn_ok">Ok</string>
     <string name="btn_submit">Submit</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="btn_generate_report">Generate Report</string>
     <string name="menu_my_schedule">My Schedule</string>
     <string name="lbl_schedule_date">Schedule Date</string>
     <string name="lbl_task_date">Task Date</string>
@@ -74,6 +76,8 @@
     <string name="lbl_add_task">Add Task</string>
     <string name="lbl_from_time">From Time</string>
     <string name="lbl_to_time">To Time</string>
+    <string name="lbl_from_date">From Date</string>
+    <string name="lbl_to_date">To Date</string>
     <string name="lbl_task_category">Task Category</string>
     <string name="btn_high">High</string>
     <string name="btn_normal">Normal</string>
@@ -81,5 +85,34 @@
     <string name="btn_standard">Standard</string>
     <string name="lbl_personal_information">Personal Information</string>
     <string name="lbl_class_teacher_colon">Class Teacher:</string>
+    <string name="lbl_grades">Grades</string>
+    <string name="lbl_test_type_colon">Test Type:</string>
+    <string name="lbl_subject_colon">Subject:</string>
+    <string name="lbl_max_marks_colon">Max Marks:</string>
+    <string name="unit_test">Unit Test</string>
+    <string name="unit_test_two">Unit Test 2</string>
+    <string name="semester">Semester</string>
+    <string name="final_test">Final</string>
+    <string name="lbl_description">Description</string>
+    <string name="lbl_max_marks">Maximum Marks</string>
+    <string name="lbl_exam_date">Exam Date</string>
+    <string name="lbl_exam_type">Exam Type</string>
+    <string name="lbl_marks_obtained_colon">Marks Obtained:</string>
+    <string name="lbl_add_exam_marks">Add Exam Marks</string>
+    <string name="lbl_subject">Subject</string>
+    <string name="error_empty_maximum_marks">Please enter Maximum Marks</string>
+    <string name="error_empty_exam_date">Please enter Exam Date</string>
+    <string name="error_empty_exam_type">Please enter Exam Type</string>
+    <string name="error_empty_subject">Please enter subject</string>
+    <string name="error_empty_marks">Please enter marks for roll number %1$s</string>
+    <string name="error_greater_than_max_marks">Marks obtained for roll number %1$s cannot be greater than maximum marks.</string>
+
+
+    <string-array name="test_type">
+        <item>@string/unit_test</item>
+        <item>@string/unit_test_two</item>
+        <item>@string/semester</item>
+        <item>@string/final_test</item>
+    </string-array>
 
 </resources>
