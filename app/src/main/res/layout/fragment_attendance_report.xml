@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/top_margin_main"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_vertical_margin"
+            android:orientation="vertical">
+
+            <include android:id="@+id/include_from_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/content_select_date"
+                android:layout_marginTop="@dimen/value_top_margin"
+                />
+
+            <include android:id="@+id/include_to_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                layout="@layout/content_select_date"
+                android:layout_marginTop="@dimen/value_top_margin"
+                />
+
+            <Button
+                android:id="@+id/btn_generate_report"
+                style="@style/buttonStyle"
+                android:layout_width="@dimen/small_button_width"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/value_top_margin"
+                android:layout_gravity="center"
+                android:text="@string/btn_generate_report"
+                />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout>
